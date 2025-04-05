@@ -26,9 +26,9 @@
         },
         {
             "id": 4,
-            "name": "Playstation 5",
-            "desc": "Sony Playstation 5th generation",
-            "price": 500,
+            "name": "M2 Macbook Air",
+            "desc": "Apple Macbook air with apple silicon", 
+            "price": 1299,  
             "color": "#544ee4",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
         },
