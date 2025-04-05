@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/pages/home_page.dart';
 import 'package:my_flutter_app/pages/login_page.dart';
+import 'package:my_flutter_app/pages/my_profile_page.dart';
 import 'package:my_flutter_app/utils/routes.dart';
 import 'package:my_flutter_app/widgets/themes.dart';
 
@@ -15,9 +16,10 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute:  MyRoutes.homeRoute,
+      initialRoute:  MyRoutes.loginRoute,
       routes: {
-        "/" : (context) => LoginPage(),
+        "/" : (context) => MyProfilePage(),
+        MyRoutes.myprofileRoute : (context) => MyProfilePage(),
         MyRoutes.homeRoute : (context) => HomePage(),
         MyRoutes.loginRoute : (context) => LoginPage(), 
       },

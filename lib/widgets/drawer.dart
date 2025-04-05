@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/utils/routes.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class MyDrawer extends StatelessWidget {
     
     return Drawer(
       child: Container(
-        color: Colors.blueAccent,
+        color: const Color.fromARGB(255, 230, 221, 244),
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -16,7 +17,7 @@ class MyDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                decoration: BoxDecoration(color: Colors.blueAccent),
+                decoration: BoxDecoration(color: const Color.fromARGB(255, 215, 201, 241)),
                 accountName: Text("Jay Jariwala"),
                 accountEmail: Text("jjariwala111@gmail.com"),
                 currentAccountPicture: CircleAvatar(
@@ -27,44 +28,56 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               CupertinoIcons.home,
-              color: Colors.white,
+              color: Colors.black,
               ),
               title: Text(
                 "Home",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
+              },
           ),
           ListTile(
             leading: Icon(
               CupertinoIcons.profile_circled,
-              color: Colors.white,
+              color: Colors.black,
               ),
               title: Text(
-                "Profile",
+                "My Profile",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, MyRoutes.myprofileRoute);
+              },
           ),
-          ListTile(
-            leading: Icon(
-              CupertinoIcons.mail,
-              color: Colors.white,
-              ),
-              title: Text(
-                "Email me",
-                textScaleFactor: 1.2,
-                style: TextStyle(
-                  color: Colors.white,
+          Container(
+            child: ListTile(
+              leading: Icon(
+                CupertinoIcons.arrow_right_circle,
+                color: Colors.black,
                 ),
-              ),
-          )
-
-
+                title: Text(
+                  "Logout",
+                  textScaleFactor: 1.2,
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, MyRoutes.loginRoute);
+                },
+            ),
+          ),
           ],
         ),
       ),
